@@ -8,3 +8,8 @@ Feature: Friendly greeting
     Given I dont tell them my name
     When I say hello
     Then they will respond with Hello mate
+
+  Scenario: Say hello when you know my name
+    Given I have told you my name is Lea
+    When I say hello
+    Then they will respond with Hello Lea
