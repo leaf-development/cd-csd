@@ -10,6 +10,6 @@ Feature: Friendly greeting
     Then they will respond with Hello mate
 
   Scenario: Say hello when you know my name
-    Given I have told you my name is Lea
+    Given I have told you my name is "Lea"
     When I say hello
-    Then they will respond with Hello Lea
+    Then they will respond with Hello "Lea"
