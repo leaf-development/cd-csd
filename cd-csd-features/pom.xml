@@ -14,6 +14,7 @@
     <properties>
         <cucumber-version>1.2.0</cucumber-version>
         <spring-version>4.1.4.RELEASE</spring-version>
+        <environment>local</environment>
     </properties>
 
     <dependencies>
@@ -67,7 +68,7 @@
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-core</artifactId>
+            <artifactId>hamcrest-all</artifactId>
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
@@ -77,7 +78,28 @@
             <version>1.1.3</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>8.12.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <environment>${environment}</environment>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
