@@ -58,8 +58,8 @@
                 <version>1.1.2</version>
                 <configuration>
                     <target>http://api.run.pivotal.io</target>
-                    <org>wine-waiter</org>
-                    <server>wine-waiter-cloudfoundry-instance</server>
+                    <org>csd</org>
+                    <server>csd-cloudfoundry-instance</server>
                     <space>cd-csd</space>
                     <url>test-cd-csd.cfapps.io</url>
                     <memory>512</memory>
